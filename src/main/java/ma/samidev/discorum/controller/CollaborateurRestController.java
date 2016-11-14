@@ -29,4 +29,11 @@ public class CollaborateurRestController {
 		return collaborateurService.addCollaborateur(collaborateur);
 	}
 	
+	@RequestMapping(value = "/collaborateur/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public boolean getCollaborateur(@PathVariable String id, @RequestBody Collaborateur collaborateur) {
+		collaborateur.setIdentifiant(id);
+		return collaborateurService.updateCollaborateur(id, collaborateur);
+	}
+	
 }

@@ -7,5 +7,7 @@ public interface CollaborateurService {
 	Collaborateur findCollaborateur(String identifiant);
 	
 	Collaborateur addCollaborateur(Collaborateur collaborateur);
+	
+	boolean updateCollaborateur(String identifiant, Collaborateur collaborateur);
 
 }

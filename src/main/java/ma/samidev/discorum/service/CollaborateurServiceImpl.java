@@ -23,5 +23,11 @@ public class CollaborateurServiceImpl implements CollaborateurService {
 	public Collaborateur addCollaborateur(Collaborateur collaborateur) {
 		return collaborateurDao.addCollaborateur(collaborateur);
 	}
+	
+	@Override
+	@Transactional
+	public boolean updateCollaborateur(String identifiant, Collaborateur collaborateur) {
+		return collaborateurDao.updateCollaborateur(identifiant, collaborateur);
+	}
 
 }

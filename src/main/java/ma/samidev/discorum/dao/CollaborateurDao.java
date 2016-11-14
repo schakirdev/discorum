@@ -8,4 +8,6 @@ public interface CollaborateurDao {
 	
 	Collaborateur addCollaborateur(Collaborateur collaborateur);
 
+	boolean updateCollaborateur(String identifiant, Collaborateur collaborateur);	
+
 }

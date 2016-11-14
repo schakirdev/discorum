@@ -23,5 +23,18 @@ public class CollaborateurDaoImpl implements CollaborateurDao {
 		entityManager.persist(collaborateur);
 		return collaborateur;
 	}
+	
+	@Override
+	public boolean updateCollaborateur(String identifiant, Collaborateur collaborateur) {
+		Collaborateur c = findCollaborateur(identifiant);
+		if (c != null) {
+			c.setNom(collaborateur.getNom());
+			c.setPrenom(collaborateur.getPrenom());
+			c.setDateNaissance(collaborateur.getDateNaissance());
+			c.setGenre(collaborateur.getGenre());
+			return true;
+		}
+		return false;
+	}
 
 }
